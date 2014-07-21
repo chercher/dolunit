@@ -1,0 +1,6 @@
+.idea
+target/
+velocity*
+dolunit.iml
+derby.log
+metastore_db/

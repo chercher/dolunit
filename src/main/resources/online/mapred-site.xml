@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+
+  <property>
+    <name>mapred.job.tracker</name>
+    <value>10.2.6.101:8021</value>
+    <final>true</final>
+  </property>
+
+  <property>
+    <name>mapred.tasktracker.map.tasks.maximum</name>
+    <value>18</value>
+    <final>true</final>
+  </property>
+
+  <property>
+    <name>mapred.tasktracker.reduce.tasks.maximum</name>
+    <value>12</value>
+    <final>true</final>
+  </property>
+
+  <property>
+    <name>mapred.hosts.exclude</name>
+    <value>/usr/local/hadoop/hadoop-release/conf/hosts.exclude</value>
+    <final>true</final>
+  </property>
+
+  <property>
+    <name>mapred.local.dir</name>
+    <value>/data/mapred/local,/data01/mapred/local,/data02/mapred/local,/data03/mapred/local,/data04/mapred/local,/data05/mapred/local</value>
+    <final>true</final>
+  </property>
+
+  <property>
+    <name>mapred.child.java.opts</name>
+    <value>-Xmx1024m</value>
+  </property>
+
+  <property>
+    <name>mapred.compress.map.output</name>
+    <value>true</value>
+  </property>
+
+  <property>
+    <name>mapred.map.output.compression.codec</name>
+    <value>org.apache.hadoop.io.compress.SnappyCodec</value>
+  </property>
+
+  <property>
+    <name>mapred.jobtracker.taskScheduler</name>
+    <value>org.apache.hadoop.mapred.FairScheduler</value>
+  </property>
+
+  <property>
+    <name>mapred.fairscheduler.allocation.file</name>
+    <value>/usr/local/hadoop/hadoop-release/conf/fairscheduler-pool.xml</value>
+  </property>
+
+  <property>
+    <name>mapred.fairscheduler.assignmultiple</name>
+    <value>true</value>
+  </property>
+
+  <property>
+    <name>mapred.fairscheduler.sizebasedweight</name>
+    <value>true</value>
+  </property>
+
+  <property>
+    <name>mapred.child.env</name>
+    <value>JAVA_LIBRARY_PATH=/usr/local/hadoop/hadoop-release/lib/native/Linux-amd64-64</value>
+  </property>
+
+  <property>
+    <name>mapred.reduce.parallel.copies</name>
+    <value>25</value>
+  </property>
+
+  <property>
+    <name>mapred.job.shuffle.input.buffer.percent</name>
+    <value>0.8</value>
+  </property>
+
+  <property>
+    <name>mapred.job.shuffle.merge.percent</name>
+    <value>0.9</value>
+  </property>
+
+  <property>
+    <name>mapred.inmem.merge.threshold</name>
+    <value>0</value>
+  </property>
+
+  <property>
+    <name>io.sort.factor</name>
+    <value>60</value>
+  </property>
+
+  <property>
+    <name>io.sort.mb</name>
+    <value>400</value>
+  </property>
+
+  <property>
+    <name>mapreduce.jobtracker.kerberos.principal</name>
+    <value>hadoop/_HOST@DIANPING.COM</value>
+  </property>
+
+  <property>
+    <name>mapreduce.jobtracker.kerberos.https.principal</name>
+    <value>host/_HOST@DIANPING.COM</value>
+  </property>
+
+  <property>
+    <name>mapreduce.tasktracker.kerberos.principal</name>
+    <value>hadoop/_HOST@DIANPING.COM</value>
+  </property>
+
+  <property>
+    <name>mapreduce.tasktracker.kerberos.https.principal</name>
+    <value>host/_HOST@DIANPING.COM</value>
+  </property>
+
+  <property>
+    <name>mapreduce.tasktracker.keytab.file</name>
+    <value>/etc/hadoop.keytab</value>
+  </property>
+
+  <property>
+    <name>mapred.task.tracker.task-controller</name>
+    <value>org.apache.hadoop.mapred.LinuxTaskController</value>
+  </property>
+
+  <property>
+    <name>mapreduce.tasktracker.group</name>
+    <value>hadoop</value>
+  </property>
+
+</configuration>
